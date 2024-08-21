@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.product-detail ul {
+    list-style: none;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+}
+.product-detail ul li label.more{
+    background: none;
+    border: 0;
+    padding-top: 6px;
+    color: #000;
+}
+.product-detail ul li label.more:hover {
+    color: red;
+}
+.page-width {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+img {
+    display: block;
+    width: 100%;
+}
+.slide__colection {
+    margin: 0 30px;
+}
+.product-detail .title {
+    color: #000;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.product-detail label ~ span{
+    display: block;
+}
+.product-detail {
+    text-align: center;
+}
+.product-detail .price {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 700;
+    color: #231f1e;
+}
+.product-detail span {
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    background: #030d1d;
+    color: #fff;
+    bottom: 100%;
+    padding: 10px 7px;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    min-width: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 15px rgb(0 0 0 / 10%);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: normal;
+    text-transform: capitalize;
+}
+.product-detail span:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #000;
+    position: absolute;
+    top: 32px;
+    left: 15px;
+}
+.product-detail label {
+    width: 30px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+.hover-title {
+    position: relative;
+}
+.hover-title:hover span {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+.product-detail label:hover {
+    border: 1px solid red;
+}
+.product-detail label.black {
+    background-color: #000;
+    margin: 0 auto;
+}
+.product-detail label.pink {
+    background-color: pink;
+    margin: 0 auto;
+}
+.product-detail label.white {
+    background-color: white;
+    margin: 0 auto;
+}
+.product-detail label.gray {
+    background-color: gray;
+    margin: 0 auto;
+}
+.product-image {
+    position: relative;
+}
+.link-icon {
+    display: inline-block;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    visibility: hidden;
+    transform: scale(0);
+}
+.link-icon ul {
+    list-style: none;
+    display: inline-block;
+}
+.link-icon ul a {
+    color: #000;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    margin: 4px 0;
+    transition: all 0.4s ease;
+}
+.link-icon ul a:hover {
+    color: #fff;
+    background-color: red;
+}
+.product-button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    visibility: hidden;
+    transform: scale(0);
+}
+.product-button a {
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    height: 40px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+.product-button a:hover {
+    background-color: #000;
+    color: #000;
+}
+.hidden-img {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    transform: scale(0);
+}
+.product-image:hover .hidden-img {
+    visibility: visible;
+    transform: scaleY(1);
+    transition: all 0.4s ease;
+}
+.product-image:hover .product-button {
+    visibility: visible;
+    transform: scaleY(1);
+    transition: all 0.4s ease;
+}
+.product-image:hover .link-icon {
+    visibility: visible;
+    transform: scaleY(1);
+    transition: all 0.4s ease;
+}
+
+
+.slide-arrow {
+    position: absolute;
+    left: -25px;
+    display: flex;
+    justify-content: flex-start;
+    top: 50%;
+    cursor: pointer;
+    font-size: 25px;
+}
+.next-arrow {
+    right: -25px;
+    justify-content: flex-end;
+}
